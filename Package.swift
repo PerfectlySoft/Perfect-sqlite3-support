@@ -22,5 +22,5 @@ import PackageDescription
 let package = Package(
 	name: "SQLite3",
 	pkgConfig: "sqlite3",
-	providers: [.Apt("sqlite3")]
+	providers: [.Apt("sqlite3"), .Apt("libsqlite3-dev")]
 )
