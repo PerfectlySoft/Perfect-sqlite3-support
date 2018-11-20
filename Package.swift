@@ -23,11 +23,5 @@ import PackageDescription
 let package = Package(
 	name: "PerfectCSQLite3",
 	pkgConfig: "sqlite3",
-	providers: [.apt(["sqlite3", "libsqlite3-dev"])],
-	products: [
-		.library(name: "PerfectCSQLite3", targets: ["PerfectCSQLite3"])
-	],
-	targets: [
-		.target(name: "PerfectCSQLite3")
-	]
+	providers: [.apt(["sqlite3", "libsqlite3-dev"])]
 )
