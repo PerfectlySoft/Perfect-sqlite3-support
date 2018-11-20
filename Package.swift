@@ -1,3 +1,4 @@
+// swift-tools-version:4.0
 //
 //  Package.swift
 //  Perfect-sqlite3-support
@@ -22,5 +23,11 @@ import PackageDescription
 let package = Package(
 	name: "PerfectCSQLite3",
 	pkgConfig: "sqlite3",
-	providers: [.Apt("sqlite3"), .Apt("libsqlite3-dev")]
+	providers: [.apt(["sqlite3", "libsqlite3-dev"])],
+	products: [
+		.library(name: "PerfectCSQLite3", targets: ["PerfectCSQLite3"])
+	],
+	targets: [
+		.target(name: "PerfectCSQLite3")
+	]
 )
